@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🌸 Quote Generator</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: 'Comic Sans MS', cursive;
+      background-color: #fff0f5;
+      color: #444;
+      padding: 40px;
+    }
+    button {
+      background-color: #ffb6c1;
+      border: none;
+      padding: 12px 24px;
+      font-size: 18px;
+      border-radius: 12px;
+      cursor: pointer;
+      color: white;
+      margin-top: 20px;
+    }
+    button:hover {
+      background-color: #ff69b4;
+    }
+    #quote {
+      font-size: 22px;
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #ffe4e1;
+      border-radius: 10px;
+      display: inline-block;
+      max-width: 500px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🌷 Motivational Quote Generator</h1>
+  <p id="quote">Click the button to get a quote!</p>
+  <br>
+  <button onclick="generateQuote()">✨ Inspire Me</button>
+
+  <script>
+    const quotes = [
+      "You’re doing better than you think 💖",
+      "Small steps every day 🌱",
+      "Girls who code glow differently ✨",
+      "Trust the process 🧁",
+      "You’re made for amazing things 🌈"
+    ];
+
+    function generateQuote() {
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      document.getElementById("quote").innerText = quotes[randomIndex];
+    }
+  </script>
+</body>
+</html>
