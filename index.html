@@ -1,11 +1,39 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Laurel's Quote App 💖</title>
-  </head>
-  <body>
-    <h1>🌸 Welcome to My Quote App! 🌸</h1>
-    <p>This is where I share inspirational quotes that sparkle with magic ✨</p>
-    <p>More coming soon... 💻🌷</p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🌸 My Quote App 🌸</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff0f5;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      color: #d87ca0;
+    }
+    p {
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🌸 Welcome to My Quote App! 🌸</h1>
+  <p>This is where I share inspirational quotes that sparkle with magic ✨</p>
+  <p>More coming soon... 💻🌷</p>
+
+  <audio id="lofi" autoplay>
+    <source src="lofi.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    const audio = document.getElementById("lofi");
+    audio.volume = 0.5;
+    setTimeout(() => {
+      audio.pause();
+    }, 20000); // Stops after 20 seconds
+  </script>
+</body>
 </html>
